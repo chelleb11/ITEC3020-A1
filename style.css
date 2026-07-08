@@ -1,0 +1,30 @@
+* {
+    box-sizing:border-box;
+    text-align:center;
+    background-color:#FAEAF9;
+}
+
+nav a {
+    display:inline-block;
+    margin:0 10px;
+}
+
+a:link {
+    color:black;
+}
+
+a:visited {
+    color:purple;
+}
+
+a:hover {
+    color:hotpink;
+}
+
+a:active {
+    color:red;
+}
+
+title {
+    color:#AD5379;
+}
