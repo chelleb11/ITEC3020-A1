@@ -181,3 +181,22 @@ footer {
     font-size: 0.9rem;
     margin-top: 40px;
 }
+
+.latest-badge {
+    display: inline-block;
+    background-color: #AD5379;
+    color: white;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.full-content {
+    margin-top: 15px;
+    color: #555;
+    line-height: 1.7;
+    text-align: left;
+}

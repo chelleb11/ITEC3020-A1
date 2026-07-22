@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function applyTheme(theme) {
         document.body.setAttribute("data-theme", theme);
-        toggleBtn.textContent = theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+        if (toggleBtn) {
+            toggleBtn.textContent = theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+        }
         localStorage.setItem("theme", theme);
     }
 
@@ -16,14 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    toggleBtn.addEventListener("click", function () {
-        const current = document.body.getAttribute("data-theme");
-        if (current === "dark") {
-            applyTheme("light");
-        } else {
-            applyTheme("dark");
-        }
-    });
+    if (toggleBtn) {
+        toggleBtn.addEventListener("click", function () {
+            const current = document.body.getAttribute("data-theme");
+            if (current === "dark") {
+                applyTheme("light");
+            } else {
+                applyTheme("dark");
+            }
+        });
+    }
 
     loadSavedTheme();
 });
