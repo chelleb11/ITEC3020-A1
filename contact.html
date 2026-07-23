@@ -3,40 +3,46 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
-        <title> Contact </title>
+        <title>Contact</title>
     </head>
     <body>
     <div id="header-placeholder"></div>
 
         <main>
             <h1>Contact Me</h1>
-            <p class="subtitle"> Enter your info below </p>
+            <p class="subtitle">Enter your info below</p>
 
             <div class="card">
                 <h2>Send a Message</h2>
-                <form>
+                <form id="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" id="name" placeholder="Your Name">
+                        <span class="error-msg" id="name-error"></span>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" id="email" placeholder="Your Email">
+                        <span class="error-msg" id="email-error"></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject">
+                        <input type="text" id="subject" placeholder="Subject">
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your message..." rows="5"></textarea>
+                        <textarea id="message" placeholder="Your message..." rows="5"></textarea>
+                        <span class="error-msg" id="message-error"></span>
                     </div>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
+                <div id="success-message" style="display:none;">
+                    <p class="success-text">Your message has been sent! I'll get back to you soon.</p>
+                </div>
             </div>
 
             <div class="card">
-                <h2> Contact Information </h2>
+                <h2>Contact Information</h2>
                 <ul>
-                    <li> <a href="mailto:michellebautista984@yahoo.com">michellebautista984@yahoo.com</a></li>
-                    <li> <a href="mailto:michb23@my.yorku.ca">michb23@my.yorku.ca</a></li>
-                    <li> <a href="https://github.com/chelleb11" target="_blank">github.com/chelleb11</a></li>
+                    <li><a href="mailto:michellebautista984@yahoo.com">michellebautista984@yahoo.com</a></li>
+                    <li><a href="mailto:michb23@my.yorku.ca">michb23@my.yorku.ca</a></li>
+                    <li><a href="https://github.com/chelleb11" target="_blank">github.com/chelleb11</a></li>
                 </ul>
             </div>
         </main>
@@ -45,5 +51,6 @@
 
     <script src="js/theme.js"></script>
     <script src="js/components.js"></script>
+    <script src="js/validate.js"></script>
     </body>
 </html>

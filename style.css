@@ -200,3 +200,18 @@ footer {
     line-height: 1.7;
     text-align: left;
 }
+
+.error-msg {
+    display: none;
+    color: #c0392b;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    text-align: left;
+}
+
+.success-text {
+    color: #54356E;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 20px 0;
+}
