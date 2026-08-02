@@ -1,18 +1,34 @@
 [
     {
         "id": 1,
-        "title": "Test 1",
-        "date": "2026-07-22",
-        "summary": "Summary",
+        "title": "Building a Light and Dark Mode",
+        "date": "07/21/2026",
         "category": "ITEC3020",
-        "content": "Full content here"
+        "summary": "I implemented a theme switcher that lets users toggle between light and dark mode.",
+        "content": "For this part I had to add a light and dark mode button to my website. I used CSS variables with :root to define the colours for each theme, and then used JavaScript to switch a data-theme attribute on the body when the button is clicked. The hardest part was that my page kept crashing because my theme.js was trying to find the toggle button before the header even loaded, so it was returning null and breaking everything. I had to add if checks to make sure the button existed before touching it. I also used localStorage to remember which theme the user picked so it does not reset every time they go to a new page. I learned that CSS variables are really useful because changing one thing on the body updates the whole page at once."
     },
     {
         "id": 2,
-        "title": "Test 2",
-        "date": "2026-07-22",
-        "summary": "Summary",
+        "title": "Loading Blog Posts Dynamically",
+        "date": "07/22/2026",
         "category": "ITEC3020",
-        "content": "Full content here"
+        "summary": "Instead of hard-coding blog posts directly in HTML, I rendered each post as a card on the page using JavaScript.",
+        "content": "For this part, I created a posts.json file inside a data folder that stores all my blog posts as objects with a title, date, category, summary, and content. Then in blog.js I used fetch() to load the file and looped through each post to create a card on the page dynamically. I also sorted the posts newest to oldest. The most challenging part was that nothing was showing up and I could not figure out why for a while. Eventually I realized fetch() does not work when you just open the HTML file directly, you have to run it through a local server. When I entered python3 -m http.server 8000 in the terminal everything started working."
+    },
+    {
+        "id": 3,
+        "title": "Building a Contact Form Validation",
+        "date": "07/23/2026",
+        "category": "ITEC3020",
+        "summary": "I added JavaScript validation to my contact form so that users see error messages when they submit incomplete or incorrect information.",
+        "content": "For this part I needed to validate the name, email, and message fields on my contact form before it could be submitted. I used e.preventDefault() to stop the form from submitting so I could run those checks first. I wrote a showError function that displays a message and a clearError function that removes it when the user fixes their input. The challenge I ran into was that my error messages were not showing up at all even though the code looked right to me. After trying to find the problem, I realized my form inputs were missing id attributes so JavaScript could not find them at all. Once I added the correct ids to each input everything started working. If all fields pass, the form hides itself and shows a success message instead."
+    },
+    {
+        "id": 4,
+        "title": "Adding a Live Search Filter to My Projects and Blog Pages",
+        "date": "07/30/2026",
+        "category": "ITEC3020",
+        "summary": "I built a search bar on both my Projects and Blog pages that filters posts as the user types, matching the title.",
+        "content": "For this part I added a search input above the projects and the blog list that filters the post as you type. For projects it checks the title using querySelector and includes(), and hides posts that do not match by setting display to none. A no results message shows up if nothing matches. My biggest issue was that the filter was not doing anything at all when I typed and clicked enter. I spent a while checking my code and it all looked fine. I eventually found out I was opening my HTML files directly from my desktop instead of through the local server. Once I was back on localhost the filter started working."
     }
 ]
